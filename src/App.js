@@ -1,23 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState, useEffect } from 'react';
+import Preloader from './components/Preloader';
 
 function App() {
+  const [showPreloader, setShowPreloader] = useState(true);
+
+  useEffect(() => {
+    document.title = "My Portfolio";
+  })
+
+  // Set a timeout to hide the preloader after some time
+  useEffect(() => {
+    const id = setTimeout(() => {
+      setShowPreloader(false);
+    }, 3200);
+
+    return () => {
+      clearTimeout(id);
+    }
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        showPreloader
+          ? <Preloader />
+          :
+          <section className="main">
+            <h1 className='test'>Full Website here</h1>
+          </section>
+      }
     </div>
   );
 }

@@ -18,6 +18,11 @@ code {
     monospace;
 }
 
+:root {
+  --primary-color: #f5f5f5;
+  --preloader-fade-time: 1s;
+}
+
 .main {
   animation: fadeIn 0.5s forwards;
   width: 100vw;

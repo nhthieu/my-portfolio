@@ -1,15 +1,21 @@
 .preloader {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
+  background: var(--primary-color);
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fadeOut 1.5s forwards;
-  animation-delay: 2s;
+  transition: opacity var(--preloader-fade-time),
+    visibility var(--preloader-fade-time);
 }
 
-.fade-out {
-  animation: fadeOut 1.5s;
+.preloader--hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 #signature {
@@ -28,14 +34,5 @@
 @keyframes dash {
   to {
     stroke-dashoffset: 0;
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 }

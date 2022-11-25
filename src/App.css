@@ -10,6 +10,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html {
   font-size: 62.5%;
 }
 
@@ -19,28 +22,41 @@ code {
 }
 
 :root {
+  --header-height: 8rem;
+
+  /* Signatures related */
+  --signature-color: #000;
+  --signature-linecap: round;
+  --preloader-signature-width: 3;
+  --header-signature-width: 6;
+
+  /* Colors */
   --primary-color: #f5f5f5;
   --preloader-fade-time: 1s;
+  --border-color: #d2d2d2;
+  --font-color-dark: #333;
 }
 
-.main {
-  animation: fadeIn 0.5s forwards;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+li {
+  list-style: none;
 }
 
-.test {
-  font-size: 1.6rem;
+a {
+  text-decoration: none;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+/* Responsive */
+/* Large devices */
+@media screen and (max-width: 992px) {
+}
+
+/* Medium devices */
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 576px) {
+}
+
+/* Small devices */
+@media screen and (max-width: 350px) {
 }

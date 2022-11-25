@@ -17,22 +17,3 @@
   opacity: 0;
   visibility: hidden;
 }
-
-#signature {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: dash 1.5s linear forwards;
-}
-
-#signature-underline {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: dash 1s linear forwards;
-  animation-delay: 1s;
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}

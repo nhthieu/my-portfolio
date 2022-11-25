@@ -1,0 +1,20 @@
+.header {
+  height: var(--header-height);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10rem;
+  color: var(--font-color-dark);
+}
+
+.header__navbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme-switch-icon {
+  font-size: 2rem;
+  margin-left: 1rem;
+}

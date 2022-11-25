@@ -1,0 +1,65 @@
+/* Style for preloader */
+
+.signature.preloader__signature {
+  width: 25rem;
+}
+
+.signature.preloader__signature #signature-title {
+  stroke: var(--signature-color);
+  stroke-width: var(--preloader-signature-width);
+  stroke-linecap: var(--signature-linecap);
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 1.5s linear forwards;
+}
+
+.signature.preloader__signature #signature-underline {
+  stroke: var(--signature-color);
+  stroke-width: var(--preloader-signature-width);
+  stroke-linecap: var(--signature-linecap);
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 1s linear forwards;
+  animation-delay: 1s;
+}
+
+/* Style for header */
+.signature.header__signature {
+  width: 10rem;
+}
+
+.signature.header__signature #signature-title {
+  stroke: var(--signature-color);
+  stroke-width: var(--header-signature-width);
+  stroke-linecap: var(--signature-linecap);
+}
+
+.signature.header__signature #signature-underline {
+  stroke: var(--signature-color);
+  stroke-width: var(--header-signature-width);
+  stroke-linecap: var(--signature-linecap);
+}
+
+.signature.signature.header__signature:hover {
+  cursor: pointer;
+}
+
+.signature.signature.header__signature:hover #signature-title {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 0.5s linear forwards;
+}
+
+.signature.signature.header__signature:hover #signature-underline {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 0.3s linear forwards;
+  animation-delay: 0.3s;
+}
+
+/* Animation handwritten signature*/
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

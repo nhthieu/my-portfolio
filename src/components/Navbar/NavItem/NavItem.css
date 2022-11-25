@@ -1,0 +1,10 @@
+.nav-item__link {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-right: 4rem;
+  user-select: none;
+}
+
+.nav-item:hover {
+  cursor: pointer;
+}

@@ -1,11 +1,22 @@
 .header {
+  width: 100%;
   height: var(--header-height);
+  padding: 0 10rem;
+  background-color: var(--primary-color);
+  color: var(--font-color);
   border-bottom: 1px solid var(--border-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10rem;
-  color: var(--font-color-dark);
+  transition: all var(--transition-time);
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: var(--primary-color);
 }
 
 .header__navbar-wrapper {
@@ -14,7 +25,18 @@
   align-items: center;
 }
 
+.header__theme-switch {
+  width: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 4rem;
+}
+
+.header__theme-switch:hover {
+  cursor: pointer;
+}
+
 .theme-switch-icon {
   font-size: 2rem;
-  margin-left: 1rem;
 }

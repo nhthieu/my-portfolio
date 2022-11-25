@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Element } from 'react-scroll';
+import { useState, useEffect, useContext } from 'react';
+import { ThemeContext } from './ThemeContext';
 import Preloader from './components/Preloader';
 import Header from './components/Header';
 import Home from './components/Home';
@@ -7,8 +7,8 @@ import About from './components/About';
 import './App.css';
 
 function App() {
-  // const [darkMode, setDarkMode] = useState(false);
   const [showPreloader, setShowPreloader] = useState(true);
+  const theme = useContext(ThemeContext).theme;
 
   useEffect(() => {
     document.title = "My Portfolio";
@@ -19,7 +19,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App" data-theme={theme}>
       {
         showPreloader &&
         <Preloader
@@ -27,14 +27,12 @@ function App() {
           removePreloader={removePreloader}
         />
       }
-      <section className="main">
-        <Header />
-        <Home />
-        <Element name="about">
-          <About />
-        </Element>
 
-      </section>
+      <Header />
+      <div className='main'>
+        {/* <Home /> */}
+        {/* <About /> */}
+      </div>
     </div>
   );
 }

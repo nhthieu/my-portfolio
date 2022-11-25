@@ -9,6 +9,7 @@ function Navbar() {
           title="Home"
           to="home"
           offset={-100}
+
         />
         <NavItem
           title="About"
@@ -19,6 +20,13 @@ function Navbar() {
           title="Skills"
           to="skills"
           offset={50}
+
+        />
+        <NavItem
+          title="Projects"
+          to="projects"
+          offset={50}
+
         />
         <NavItem
           title="Contact"

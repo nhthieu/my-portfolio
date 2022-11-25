@@ -5,7 +5,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: var(--primary-color);
+  background-color: var(--primary-color);
   display: flex;
   justify-content: center;
   align-items: center;

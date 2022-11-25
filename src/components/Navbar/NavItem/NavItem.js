@@ -7,8 +7,14 @@ function NavItem({
   offset,
 }) {
   return (
-    <li className="nav-item">
-      <Link className="nav-item__link" to={to} spy={true} smooth={true} offset={offset} duration={500}>{title}</Link>
+    <li className="nav-item" >
+      <Link
+        className="nav-item__link"
+        activeClass="active"
+        to={to} spy={true}
+        smooth={true}
+        offset={offset}
+        duration={500}>{title}</Link>
     </li>
   );
 }

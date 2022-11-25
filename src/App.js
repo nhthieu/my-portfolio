@@ -3,33 +3,24 @@ import { useState, useEffect } from 'react';
 import Preloader from './components/Preloader';
 
 function App() {
-  const [hidePreloader, setHidePreloader] = useState(false);
   const [showPreloader, setShowPreloader] = useState(true);
-  const fadeOutTime = 2000;
 
   useEffect(() => {
     document.title = "My Portfolio";
   })
 
-  // Set a timeout to hide the preloader after some time
-  useEffect(() => {
-    const id = setTimeout(() => {
-      setHidePreloader(true);
-    }, fadeOutTime);
-
-    const id2 = setTimeout(() => {
-      setShowPreloader(false);
-    }, fadeOutTime + 1000);
-
-    return () => {
-      clearTimeout(id);
-      clearTimeout(id2);
-    }
-  }, []);
+  const removePreloader = () => {
+    setShowPreloader(false);
+  }
 
   return (
     <div className="App">
-      {showPreloader && <Preloader hidePreloader={hidePreloader} />}
+      {
+        showPreloader &&
+        <Preloader
+          timeToFadeOut={2000}
+          removePreloader={removePreloader}
+        />}
       <section className="main">
         <h1 className='test'>Full Website here</h1>
       </section>

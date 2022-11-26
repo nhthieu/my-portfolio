@@ -30,24 +30,26 @@ code {
   --header-signature-width: 6;
 
   /* Colors for white theme*/
-  --signature-color: #333;
   --primary-color: #f5f5f5;
-  --preloader-fade-time: 1s;
+  --signature-color: #000;
   --border-color: #d2d2d2;
-  --font-color: #333;
-  --nav-item-color: #333;
+  --font-color: #000;
+  --nav-item-color: #368cdd;
+  --switch-color: #ffffffde;
 
-  /* Change theme transition time */
+  /* Time for animations */
   --transition-time: 0.5s;
+  --preloader-fade-time: 0.5s;
 }
 
 /* Colors for dark theme */
 [data-theme="dark"] {
   --primary-color: #121212;
   --border-color: rgb(161, 161, 161);
-  --font-color: #f5f5f5;
-  --signature-color: #f5f5f5;
-  --nav-item-color: #f5f5f5;
+  --font-color: #ffffffde;
+  --signature-color: #ffffffde;
+  --nav-item-color: #a37cf0;
+  --switch-color: #121212;
 }
 
 li {
@@ -60,15 +62,16 @@ a {
 
 /* Test */
 .App {
-  /* transition: all var(--transition-time); */
+  /* background: var(--primary-color); */
+  color: var(--font-color);
 }
 
 .main {
+  padding: 4rem 10rem 0;
   width: 100%;
   height: 100vh;
   background-color: var(--primary-color);
-  color: var(--font-color);
-  transition: all var(--transition-time);
+  /* transition: all var(--transition-time); */
 }
 
 /* Responsive */

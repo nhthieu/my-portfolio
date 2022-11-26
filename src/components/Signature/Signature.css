@@ -2,6 +2,13 @@
 
 .signature.preloader__signature {
   width: 25rem;
+  transition: opacity var(--preloader-fade-time),
+    visibility var(--preloader-fade-time);
+}
+
+.fade-out {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .signature.preloader__signature #signature-title {
@@ -32,30 +39,32 @@
   stroke: var(--signature-color);
   stroke-width: var(--header-signature-width);
   stroke-linecap: var(--signature-linecap);
+  /* transition: all var(--transition-time); */
 }
 
 .signature.header__signature #signature-underline {
   stroke: var(--signature-color);
   stroke-width: var(--header-signature-width);
   stroke-linecap: var(--signature-linecap);
+  /* transition: all var(--transition-time); */
 }
 
 .signature.signature.header__signature:hover {
   cursor: pointer;
 }
 
-.signature.signature.header__signature:hover #signature-title {
+/* .signature.header__signature:hover #signature-title {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: dash 0.5s linear forwards;
 }
 
-.signature.signature.header__signature:hover #signature-underline {
+.signature.header__signature:hover #signature-underline {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: dash 0.3s linear forwards;
   animation-delay: 0.3s;
-}
+} */
 
 /* Animation handwritten signature*/
 @keyframes dash {

@@ -4,26 +4,26 @@ import Signature from "../Signature";
 import "./Preloader.css";
 
 function Preloader({ timeToFadeOut, removePreloader }) {
-  const [fadeOutPreloader, setFadeOutPreloader] = useState(false);
+  const [fadeOut, setFadeOut] = useState(false);
   const preloaderClass = classNames({
     "preloader": true,
-    "preloader--hidden": fadeOutPreloader
+    "fade-out": fadeOut
   })
 
   // Set timeout to fade out preloader
   useEffect(() => {
     const id = setTimeout(() => {
-      setFadeOutPreloader(true);
+      setFadeOut(true);
     }, timeToFadeOut);
 
     return () => {
       clearTimeout(id);
     }
-  });
+  }, [timeToFadeOut]);
 
   return (
     <div className={preloaderClass} onTransitionEnd={removePreloader}>
-      <Signature preloaderSignature />
+      <Signature preloaderSignature fadeOut={fadeOut} />
     </div>
   );
 }

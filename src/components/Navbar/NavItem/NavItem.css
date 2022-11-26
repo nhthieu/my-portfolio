@@ -3,6 +3,10 @@
   position: relative;
 }
 
+.appear {
+  animation: appear 1.25s ease-in-out forwards;
+}
+
 .nav-item:last-child {
   margin-right: 0;
 }
@@ -16,8 +20,7 @@
 .nav-item__link:hover,
 .nav-item__link.active {
   cursor: pointer;
-  /* color: var(--nav-item-color); */
-  transition: all 0.2s linear;
+  color: var(--nav-item-color);
 }
 
 .nav-item__link:hover::after,
@@ -38,5 +41,16 @@
   }
   100% {
     width: 100%;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

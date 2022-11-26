@@ -30,7 +30,7 @@ function App() {
 
       <Header />
       <div className='main'>
-        {/* <Home /> */}
+        <Home />
         {/* <About /> */}
       </div>
     </div>

@@ -1,4 +1,90 @@
 .home {
-  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  padding: 16rem 16rem 0;
+}
+
+.home__introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  margin-right: 8rem;
+}
+
+.home__introduction-greetings {
+  font-size: 3.2rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+
+.home__introduction-name {
+  color: var(--special-font-color);
+}
+
+.home__introduction-job {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.home__introduction-job-dash {
+  border: 1px solid var(--font-color);
+  opacity: 0.2;
+  width: 10%;
+  margin-right: 2rem;
+}
+
+.home__introduction-job-title {
+  position: relative;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: var(--font-color);
+  opacity: 0.8;
+  word-spacing: 0.5rem;
+}
+
+.home__introduction-job-title:before {
+  content: "";
+  display: inline-block;
+  width: 8rem;
+  height: 1px;
+  background-color: var(--font-color);
+  margin-right: 2rem;
+  transform: translateY(-0.25em);
+}
+
+.home__introduction-description p {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--font-color);
+  opacity: 0.6;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.home__avatar {
+  background: url(../../assets/profile.jpg) no-repeat center;
+  background-size: cover;
+  /* width: 32%; */
+  flex: 0.5;
+  aspect-ratio: 1/1;
+  box-shadow: inset 0 0 0 9px rgb(255 255 255 /30%);
+  animation: blob 8s ease-in-out infinite 0.75s;
+}
+
+@keyframes blob {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 30% 70% 40%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
 }

@@ -1,7 +1,7 @@
 .header {
   width: 100%;
   height: var(--header-height);
-  padding: 0 10rem;
+  padding: 0 16rem;
   background-color: var(--primary-color);
   color: var(--font-color);
   /* border-bottom: 1px solid var(--border-color); */
@@ -11,7 +11,7 @@
   position: sticky;
   top: 0;
   z-index: 10;
-  /* transition: all var(--transition-time); */
+  transition: all var(--transition-time);
 }
 
 .header__navbar-wrapper {

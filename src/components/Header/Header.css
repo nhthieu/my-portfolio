@@ -4,7 +4,7 @@
   padding: 0 16rem;
   background-color: var(--primary-color);
   color: var(--font-color);
-  /* border-bottom: 1px solid var(--border-color); */
+  border-bottom: 1px solid var(--border-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,12 +21,17 @@
 }
 
 .header__theme-switch {
-  width: 4rem;
+  /* width: 4rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.4rem;
   margin-left: 4rem;
 }
 
 .header__theme-switch:hover {
   cursor: pointer;
+  color: var(--nav-item-color);
 }
 
 .switch__icon {
@@ -36,4 +41,21 @@
   height: 100%;
   font-size: 1.6rem;
   color: var(--switch-color);
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    border-bottom: 0;
+    border-top: 1px solid var(--border-color);
+    padding: 0 2rem;
+    justify-content: center;
+    height: var(--header-height-mobile);
+  }
+
+  .header__signature {
+    display: none;
+  }
 }

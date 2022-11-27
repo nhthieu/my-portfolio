@@ -7,16 +7,26 @@
   animation: appear 1.25s ease-in-out forwards;
 }
 
-.nav-item:last-child {
-  margin-right: 0;
+.nav-item__icon {
+  display: none;
 }
 
+.nav-item:last-child {
+  margin-right: 0;
+  /* width: ; */
+}
+
+.nav-item__theme-switch,
 .nav-item__link {
   font-size: 2rem;
   font-weight: 300;
   user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.nav-item__theme-switch:hover,
 .nav-item__link:hover,
 .nav-item__link.active {
   cursor: pointer;
@@ -52,5 +62,20 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav-item {
+    margin: 0 4rem 0 0;
+  }
+
+  .nav-item__icon {
+    display: block;
+    font-size: 2rem;
+  }
+
+  .nav-item__title {
+    display: none;
   }
 }

@@ -72,3 +72,13 @@
     stroke-dashoffset: 0;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .signature.header__signature {
+    width: 7rem;
+  }
+
+  .signature.signature.preloader__signature {
+    width: 16rem;
+  }
+}

@@ -20,6 +20,7 @@ function Home() {
           <div className="home__introduction-contact-btn"></div>
         </div>
         <div className="home__avatar"></div>
+
       </div>
     </Element>
   );

@@ -1,4 +1,6 @@
 import { useState, useEffect, useContext } from 'react';
+import SimpleBar from 'simplebar-react';
+import 'simplebar-react/dist/simplebar.min.css';
 import { ThemeContext } from './ThemeContext';
 import Preloader from './components/Preloader';
 import Header from './components/Header';
@@ -30,7 +32,7 @@ function App() {
 
       <Header />
       <div className='main'>
-        <Home />
+        {/* <Home /> */}
         {/* <About /> */}
       </div>
     </div>

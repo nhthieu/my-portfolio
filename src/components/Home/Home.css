@@ -3,10 +3,15 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 16rem 16rem 0;
+  height: 100vh;
+  padding: var(--standard-padding) 32rem;
+  /* background-color: var(--primary-color); */
+  transition: all var(--transition-time);
+  position: relative;
 }
 
 .home__introduction {
+  padding: 6rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,6 +23,7 @@
   font-size: 3.2rem;
   font-weight: 500;
   margin-bottom: 3rem;
+  user-select: none;
 }
 
 .home__introduction-name {
@@ -28,6 +34,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 3rem;
+  user-select: none;
 }
 
 .home__introduction-job-dash {
@@ -49,10 +56,10 @@
 .home__introduction-job-title:before {
   content: "";
   display: inline-block;
-  width: 8rem;
+  width: 6rem;
   height: 1px;
   background-color: var(--font-color);
-  margin-right: 2rem;
+  margin-right: 1rem;
   transform: translateY(-0.25em);
 }
 
@@ -69,10 +76,52 @@
   background: url(../../assets/profile.jpg) no-repeat center;
   background-size: cover;
   /* width: 32%; */
-  flex: 0.5;
+  flex: 0.6;
   aspect-ratio: 1/1;
   box-shadow: inset 0 0 0 9px rgb(255 255 255 /30%);
   animation: blob 8s ease-in-out infinite 0.75s;
+}
+
+.home__scroll {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 4.2rem;
+  height: 22rem;
+  background-color: var(--special-font-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.home__scroll p {
+  /* font-family: var(--font-family); */
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  letter-spacing: 0.5rem;
+  margin-bottom: 2rem;
+  user-select: none;
+}
+
+.home__scroll-icon {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.home__scroll-icon-line {
+  width: 2px;
+  height: 100%;
+  background-color: var(--primary-color);
+  margin: 0.5rem 0;
+  animation: scroll 1.5s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
 }
 
 @keyframes blob {
@@ -86,5 +135,67 @@
 
   100% {
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0.4;
+    -webkit-transform: translateY(-60px);
+    transform: translateY(-60px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(60px);
+    transform: translateY(60px);
+  }
+}
+
+@keyframes disappear {
+  0% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home {
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+  }
+
+  .home__introduction {
+    margin: 0;
+    flex: 0.5;
+    /* margin-bottom: 4rem; */
+    /* margin: 0 auto; */
+  }
+
+  .home__introduction-greetings {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    padding: 0;
+  }
+
+  .home__avatar {
+    flex: 0.4;
+  }
+
+  .home__introduction-job-title {
+    font-size: 1.6rem;
+  }
+
+  .home__scroll {
+    display: none;
   }
 }

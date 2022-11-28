@@ -1,6 +1,7 @@
 /* Style for preloader */
 
 .signature.preloader__signature {
+  color: var(--signature-color);
   width: 25rem;
   transition: opacity var(--preloader-fade-time),
     visibility var(--preloader-fade-time);

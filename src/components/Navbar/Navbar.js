@@ -18,7 +18,6 @@ function Navbar() {
     toggleTheme();
   }
 
-
   return (
     <nav className="navbar">
       <ul className="navbar__list">
@@ -27,7 +26,7 @@ function Navbar() {
           icon={<FontAwesomeIcon icon={faHouse} />}
           title="Home"
           to="home"
-          offset={-150}
+          offset={0}
         />
         <NavItem
           type="link"

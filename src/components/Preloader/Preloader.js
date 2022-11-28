@@ -25,6 +25,7 @@ function Preloader({ timeToFadeOut, removePreloader }) {
     <div className={preloaderClass} onTransitionEnd={removePreloader}>
       <Signature preloaderSignature fadeOut={fadeOut} />
     </div>
+
   );
 }
 

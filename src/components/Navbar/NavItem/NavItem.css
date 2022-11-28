@@ -16,6 +16,11 @@
   /* width: ; */
 }
 
+.nav-item__theme-switch {
+  width: 1rem;
+  aspect-ratio: 1/1;
+}
+
 .nav-item__theme-switch,
 .nav-item__link {
   font-size: 2rem;
@@ -70,9 +75,10 @@
     margin: 0 4rem 0 0;
   }
 
+  .nav-item__theme-switch,
   .nav-item__icon {
     display: block;
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .nav-item__title {

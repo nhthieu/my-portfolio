@@ -1,0 +1,19 @@
+.social__block {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: var(--primary-color);
+  z-index: 10;
+  padding: 3.2rem;
+  transition: all var(--transition-time);
+}
+
+.social__list {
+  display: flex;
+}
+
+@media screen and (max-width: 480px) {
+  .social__block {
+    display: none;
+  }
+}

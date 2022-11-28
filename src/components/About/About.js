@@ -1,7 +1,7 @@
 import { Element } from "react-scroll";
 import "./About.css";
 
-function About() {
+function About({ offsetY }) {
   return (
     <Element name="about">
       <div className="about">

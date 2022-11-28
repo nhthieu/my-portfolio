@@ -1,4 +1,5 @@
 import { Element } from "react-scroll";
+
 import Typer from "./Typer";
 import "./Home.css";
 
@@ -8,11 +9,12 @@ function Home() {
       <div className="home">
         <div className="home__introduction">
           <div className="home__introduction-greetings">
-            <h1>Hello, I'm <span className="home__introduction-name">Hieu Nguyen</span></h1>
+            <h1>Hello, I'm</h1>
+            <h1 className="home__introduction-name">Hieu Nguyen</h1>
           </div>
           <Typer
             prefix="I'm into"
-            texts={["Web Developing", "Backend Programming", "Frontend Programming", "Algorithms"]}
+            texts={["Web Developing", "Programming", "Algorithms"]}
           />
           <div className="home__introduction-job">
             <p className="home__introduction-job-title">&lt;BackendDeveloper /&gt;</p>
@@ -20,7 +22,12 @@ function Home() {
           <div className="home__introduction-contact-btn"></div>
         </div>
         <div className="home__avatar"></div>
-
+      </div>
+      <div className="home__scroll">
+        <p>SCROLL</p>
+        <div className="home__scroll-icon">
+          <div className="home__scroll-icon-line"></div>
+        </div>
       </div>
     </Element>
   );

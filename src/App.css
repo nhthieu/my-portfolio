@@ -23,7 +23,8 @@ code {
 
 :root {
   --header-height: 10rem;
-  --header-height-mobile: 8rem;
+  --header-height-mobile: 6rem;
+  --standard-padding: 16rem;
 
   /* Signatures related */
   --signature-linecap: round;
@@ -37,9 +38,9 @@ code {
   --border-color: #d2d2d2;
   --font-color: #000;
   --opposite-font-color: #ffffffde;
-  --special-font-color: #368cdd;
+  --special-font-color: #ff5a5f;
   --sr-nav-color: hsl(100 0% 0% / 0.1);
-  --nav-item-color: #368cdd;
+  --nav-item-color: #ff5a5f;
   --switch-color: #ffffffde;
 
   /* Time for animations */
@@ -54,10 +55,10 @@ code {
   --border-color: rgb(161, 161, 161);
   --font-color: #ffffffde;
   --opposite-font-color: #000;
-  --special-font-color: #a37cf0;
+  --special-font-color: #f8ca0e;
   --home-name-color: rgb(243, 122, 29);
   --signature-color: #ffffffde;
-  --nav-item-color: #a37cf0;
+  --nav-item-color: #f8ca0e;
   --switch-color: #121212;
   --sr-nav-color: hsl(0 0% 100% / 0.1);
 }
@@ -70,22 +71,41 @@ a {
   text-decoration: none;
 }
 
-/* body::-webkit-scrollbar-track {
-  background: var(--primary-color);
-}
-
-body::-webkit-scrollbar-thumb {
-  background: var(--special-font-color);
-} */
-
-/* Test */
 .App {
-  /* background: var(--primary-color); */
   color: var(--font-color);
 }
 
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.bg--content {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(10px);
+  transform: scale(1.1);
+}
+
+.bg--content.bg--light {
+  background-image: url(./assets/japan-day.png);
+  /* transition: all var(--transition-time); */
+}
+
+.bg--content.bg--dark {
+  background-image: url(./assets/japan-night.png);
+  /* transition: all var(--transition-time); */
+}
+
 .main {
-  padding: 0 16rem 0;
-  background-color: var(--primary-color);
+  /* background-color: var(--primary-color); */
   transition: all var(--transition-time);
 }

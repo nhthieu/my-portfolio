@@ -6,20 +6,22 @@ import "./Header.css"
 
 function Header() {
   return (
-    <header className="header">
-      <div className="header__signature">
-        <Link
-          to={"home"}
-          spy={true}
-          smooth={true}
-          offset={-150}
-          duration={500}
-        >
-          <Signature headerSignature />
-        </Link>
+    <div className="header">
+      <div className="header__content">
+        <div className="header__signature">
+          <Link
+            to={"home"}
+            spy={true}
+            smooth={true}
+            offset={-150}
+            duration={500}
+          >
+            <Signature headerSignature />
+          </Link>
+        </div>
+        <Navbar />
       </div>
-      <Navbar />
-    </header>
+    </div>
   );
 }
 

@@ -1,4 +1,4 @@
 .about {
   height: 1000px;
-  background-color: #ccc;
+  /* background-color: var(--opposite-color); */
 }

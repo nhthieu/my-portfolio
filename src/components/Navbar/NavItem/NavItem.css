@@ -1,6 +1,9 @@
 .nav-item {
   margin-right: 4rem;
   position: relative;
+  transition-property: none;
+  -webkit-transition-property: none;
+  -moz-transition-property: none;
 }
 
 .appear {

@@ -1,9 +1,13 @@
+import { useContext } from "react";
 import { Element } from "react-scroll";
+import { ScrollYContext } from "../../ScrollYContext";
 
 import Typer from "./Typer";
 import "./Home.css";
 
 function Home() {
+  const offsetY = useContext(ScrollYContext).offsetY;
+
   return (
     <Element name="home">
       <div className="home">
@@ -17,7 +21,7 @@ function Home() {
             texts={["Web Developing", "Programming", "Algorithms"]}
           />
           <div className="home__introduction-job">
-            <p className="home__introduction-job-title">&lt;BackendDeveloper /&gt;</p>
+            <p className="home__introduction-job-title">&lt;ITStudent /&gt;</p>
           </div>
           <div className="home__introduction-contact-btn"></div>
         </div>

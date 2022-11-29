@@ -6,7 +6,10 @@
   height: 100vh;
   padding: var(--standard-padding) 32rem;
   /* background-color: var(--primary-color); */
-  transition: all var(--transition-time);
+  /* background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../../assets/japan-day.png); */
   position: relative;
 }
 
@@ -75,6 +78,7 @@
 .home__avatar {
   background: url(../../assets/profile.jpg) no-repeat center;
   background-size: cover;
+  /* filter: grayscale(100%); */
   /* width: 32%; */
   flex: 0.6;
   aspect-ratio: 1/1;

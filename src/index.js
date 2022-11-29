@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from './ThemeContext';
+import { ScrollYProvider } from './ScrollYContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ThemeProvider>
-      <App />
+      <ScrollYProvider>
+        <App />
+      </ScrollYProvider>
     </ThemeProvider>
   </React.StrictMode>
 );

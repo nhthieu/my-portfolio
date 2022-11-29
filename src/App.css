@@ -97,15 +97,14 @@ a {
 
 .bg--content.bg--light {
   background-image: url(./assets/japan-day.png);
-  /* transition: all var(--transition-time); */
 }
 
 .bg--content.bg--dark {
-  background-image: url(./assets/japan-night.png);
+  background-image: url(./assets/dark.jpg);
   /* transition: all var(--transition-time); */
 }
 
 .main {
   /* background-color: var(--primary-color); */
-  transition: all var(--transition-time);
+  /* transition: all var(--transition-time); */
 }

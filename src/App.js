@@ -1,45 +1,44 @@
 import { useState, useEffect, useContext } from 'react';
+
 import classNames from 'classnames';
 import { ThemeContext } from './ThemeContext';
+
+
 import Preloader from './components/Preloader';
 import Header from './components/Header';
+import Social from './components/Social';
 import Home from './components/Home';
 import About from './components/About';
-import Social from './components/Social';
+import Skills from './components/Skills';
+
 import './App.css';
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+
 
 function App() {
   const [showPreloader, setShowPreloader] = useState(true);
   const theme = useContext(ThemeContext).theme;
-  const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = () => setOffsetY(window.pageYOffset);
-  const resetScrollBar = () => window.scrollTo(0, 0);
   const backgroundClass = classNames({
     "bg--content": true,
     "bg--light": theme === "light",
     "bg--dark": theme === "dark",
   });
 
+  const removePreloader = () => setShowPreloader(false);
+  const resetScrollBar = () => window.scrollTo(0, 0);
+
   // Change web title
   useEffect(() => {
     document.title = "My Portfolio";
   })
 
-  // Add scroll event listener
-  // Reset scroll bar to top when page is unloaded
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener("unload", resetScrollBar);
-
+    window.addEventListener('unload', resetScrollBar);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener("unload", resetScrollBar);
+      window.removeEventListener('unload', resetScrollBar);
     }
   }, [])
-
-  const removePreloader = () => {
-    setShowPreloader(false);
-  }
 
   return (
     <div className="App" data-theme={theme}>
@@ -58,6 +57,7 @@ function App() {
         <Social />
         <Home />
         <About />
+        <Skills />
       </div>
     </div>
   );

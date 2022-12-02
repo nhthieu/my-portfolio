@@ -10,7 +10,7 @@ function Header() {
   const offsetY = useContext(ScrollYContext).offsetY;
   const headerClass = classNames({
     "header": true,
-    "header__bg-color": offsetY >= 100
+    // "header__bg-color": offsetY >= 100
   })
 
   return (

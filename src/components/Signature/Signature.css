@@ -1,7 +1,7 @@
 /* Style for preloader */
 
 .signature.preloader__signature {
-  color: var(--signature-color);
+  color: var(--font-color);
   width: 25rem;
   transition: opacity var(--preloader-fade-time),
     visibility var(--preloader-fade-time);
@@ -13,7 +13,7 @@
 }
 
 .signature.preloader__signature #signature-title {
-  stroke: var(--signature-color);
+  stroke: var(--font-color);
   stroke-width: var(--preloader-signature-width);
   stroke-linecap: var(--signature-linecap);
   stroke-dasharray: 1000;
@@ -22,7 +22,7 @@
 }
 
 .signature.preloader__signature #signature-underline {
-  stroke: var(--signature-color);
+  stroke: var(--font-color);
   stroke-width: var(--preloader-signature-width);
   stroke-linecap: var(--signature-linecap);
   stroke-dasharray: 1000;
@@ -31,41 +31,30 @@
   animation-delay: 1s;
 }
 
-/* Style for header */
+/* Signature for Home and Header */
 .signature.header__signature {
   width: 9rem;
 }
 
-.signature.header__signature #signature-title {
-  stroke: var(--signature-color);
+.signature.home__signature {
+  width: 11rem;
+}
+
+.signature.header__signature #signature-title,
+.signature.home__signature #signature-title {
+  stroke: var(--font-color);
   stroke-width: var(--header-signature-width);
   stroke-linecap: var(--signature-linecap);
   /* transition: all var(--transition-time); */
 }
 
-.signature.header__signature #signature-underline {
-  stroke: var(--signature-color);
+.signature.header__signature #signature-underline,
+.signature.home__signature #signature-underline {
+  stroke: var(--font-color);
   stroke-width: var(--header-signature-width);
   stroke-linecap: var(--signature-linecap);
   /* transition: all var(--transition-time); */
 }
-
-.signature.signature.header__signature:hover {
-  cursor: pointer;
-}
-
-/* .signature.header__signature:hover #signature-title {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: dash 0.5s linear forwards;
-}
-
-.signature.header__signature:hover #signature-underline {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: dash 0.3s linear forwards;
-  animation-delay: 0.3s;
-} */
 
 /* Animation handwritten signature*/
 @keyframes dash {

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Element } from "react-scroll";
 import { ScrollYContext } from "../../ScrollYContext";
 
+import Signature from "../Signature";
 import Typer from "./Typer";
 import "./Home.css";
 
@@ -10,14 +11,22 @@ function Home() {
 
   return (
     <Element name="home">
-      <div className="home">
-        <div className="home__introduction">
+      <div className="home row">
+        <div className="home__logo">
+          <div className="home__logo-content">
+            <Signature
+              homeSignature={true}
+            />
+          </div>
+        </div>
+
+        <div className="home__introduction col-6">
           <div className="home__introduction-greetings">
-            <h1>Hello, I'm</h1>
+            <h1>hello, i'm</h1>
             <h1 className="home__introduction-name">Hieu Nguyen</h1>
           </div>
           <Typer
-            prefix="I'm into"
+            prefix="i'm into"
             texts={["Web Developing", "Programming", "Algorithms"]}
           />
           <div className="home__introduction-job">
@@ -25,14 +34,15 @@ function Home() {
           </div>
           <div className="home__introduction-contact-btn"></div>
         </div>
-        <div className="home__avatar"></div>
-      </div>
-      <div className="home__scroll">
-        <p>SCROLL</p>
-        <div className="home__scroll-icon">
-          <div className="home__scroll-icon-line"></div>
+        {/* <div className="home__avatar"></div> */}
+        <div className="home__scroll">
+          <p>SCROLL</p>
+          <div className="home__scroll-icon">
+            <div className="home__scroll-icon-line"></div>
+          </div>
         </div>
       </div>
+
     </Element>
   );
 }

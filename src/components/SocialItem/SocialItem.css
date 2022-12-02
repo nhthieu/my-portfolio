@@ -1,0 +1,18 @@
+.social__item {
+  margin-bottom: 2.4rem;
+}
+
+.social__item:last-child {
+  margin-bottom: 0;
+}
+
+.social__icon {
+  font-size: 2rem;
+  color: var(--primary-color);
+  transition: color 0.3s ease-in-out;
+}
+
+.social__icon:hover {
+  cursor: pointer;
+  color: var(--secondary-color-hover);
+}

@@ -1,0 +1,27 @@
+.drawer {
+  z-index: 30;
+  position: absolute;
+  top: 0;
+  left: var(--sidebar-width);
+  height: 100vh;
+  width: 50rem;
+  background-color: var(--secondary-color);
+  border-left: 1px solid var(--third-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.drawer__content {
+  padding: 16rem 0 0 12rem;
+}
+
+.drawer__list {
+  font-size: 2.6rem;
+  font-weight: 300;
+  /* color: var(--font-color); */
+}
+
+.drawer-open {
+  transform: scaleX(1);
+}

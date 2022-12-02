@@ -10,6 +10,7 @@
   /* background-color: transparent;
   transition: background-color var(--transition-time) ease-in-out;
   -webkit-transition: background-color var(--transition-time) ease-in-out; */
+  background-color: var(--primary-color);
 }
 
 .header__bg-color {

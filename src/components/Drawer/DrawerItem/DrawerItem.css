@@ -1,0 +1,40 @@
+.drawer__item {
+  margin-bottom: 5rem;
+  color: var(--font-color);
+}
+
+.drawer__item:last-child {
+  margin-bottom: 0;
+}
+
+.drawer__link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* .drawer__link.active, */
+.drawer__link:hover {
+  cursor: pointer;
+  color: var(--third-color);
+}
+/* 
+.drawer__link.active::after, */
+.drawer__link:hover::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 0.3rem;
+  background-color: var(--primary-color);
+  bottom: -4px;
+  left: 0px;
+  animation: slideIn 0.3s linear forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}

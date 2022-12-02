@@ -2,7 +2,7 @@
   position: fixed;
   bottom: 0;
   right: 0;
-  background-color: var(--primary-color);
+  background-color: var(--special-font-color);
   z-index: 10;
   padding: 3.2rem;
   transform: scaleX(0);

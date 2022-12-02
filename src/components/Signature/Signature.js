@@ -1,11 +1,17 @@
 import classNames from "classnames";
 import "./Signature.css";
 
-function Signature({ preloaderSignature = false, headerSignature = false, fadeOut = false }) {
+function Signature({
+  preloaderSignature = false,
+  headerSignature = false,
+  homeSignature = false,
+  fadeOut = false }
+) {
   const signatureClass = classNames({
     "signature": true,
     "header__signature": headerSignature,
     "preloader__signature": preloaderSignature,
+    "home__signature": homeSignature,
     "fade-out": fadeOut
   })
 

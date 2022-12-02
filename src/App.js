@@ -5,6 +5,7 @@ import { ThemeContext } from './ThemeContext';
 
 
 import Preloader from './components/Preloader';
+import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import Social from './components/Social';
 import Home from './components/Home';
@@ -19,12 +20,6 @@ import './App.css';
 function App() {
   const [showPreloader, setShowPreloader] = useState(true);
   const theme = useContext(ThemeContext).theme;
-  const backgroundClass = classNames({
-    "bg--content": true,
-    "bg--light": theme === "light",
-    "bg--dark": theme === "dark",
-  });
-
   const removePreloader = () => setShowPreloader(false);
   const resetScrollBar = () => window.scrollTo(0, 0);
 
@@ -49,17 +44,24 @@ function App() {
           removePreloader={removePreloader}
         />
       }
-      <Header />
+      <div className="overlay"></div>
+      {/* <Header /> */}
+
+      {/* Main section of website */}
+
+      <div className="bg">
+        <span className="bg__content"></span>
+      </div>
+
+      <Sidebar />
       <div className='main'>
-        <div className="bg">
-          <span className={backgroundClass}></span>
-        </div>
-        <Social />
+        {/* <h1> Hello</h1> */}
+        {/* <Social /> */}
         <Home />
         <About />
-        <Skills />
+        {/* <Skills /> */}
       </div>
-    </div>
+    </div >
   );
 }
 

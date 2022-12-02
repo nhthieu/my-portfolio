@@ -4,23 +4,25 @@
   width: 80%;
   margin-bottom: 3rem;
   user-select: none;
+  letter-spacing: 0.6rem;
 }
 
 .typewriter__prefix {
-  font-size: 3.5rem;
-  font-weight: 600;
-  color: var(--font-color);
+  font-size: 3.8rem;
+  /* font-weight: 600; */
+  font-weight: 400;
+  color: var(--primary-color);
 }
 
 .Typewriter {
-  font-size: 3.5rem;
-  font-weight: 600;
-  color: var(--special-font-color);
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: var(--secondary-color);
   display: inline-block;
 }
 
 .Typewriter__cursor {
-  color: var(--font-color);
+  color: var(--primary-color);
 }
 
 @media screen and (max-width: 480px) {

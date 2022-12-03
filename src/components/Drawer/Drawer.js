@@ -34,7 +34,7 @@ function Drawer({
           <DrawerItem
             title="skills"
             to="skills"
-            offset={-70}
+            offset={0}
             open={open}
           />
           <DrawerItem

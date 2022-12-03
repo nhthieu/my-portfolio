@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import "./About.css";
 
 function About() {
-  const [ref, inView, entry] = useInView({ threshold: 0.5 });
+  const [ref, inView, entry] = useInView({ threshold: 0.35 });
   const titleVariants = {
     hidden: {
       opacity: 0,
@@ -85,6 +85,7 @@ function About() {
               className="img-1 span-2"
               variants={getImageVariants(0.2)}
               animate={inView ? "visible" : "hidden"}
+            // whileHover={{ scale: 1.05 }}
             >
               <img src={require("../../assets/band.png")} className="about__gallery--img" alt="me" />
             </motion.div>
@@ -134,7 +135,7 @@ function About() {
                   animate={inView ? "visible" : "hidden"}
                   variants={getParagraphVariants(0.3)}
                 >
-                  <span>age: </span>20
+                  <span>age: </span>{new Date().getFullYear() - 2002}
                 </motion.p>
                 <motion.p
                   animate={inView ? "visible" : "hidden"}

@@ -40,7 +40,7 @@ function App() {
       {
         showPreloader &&
         <Preloader
-          timeToFadeOut={1500}
+          timeToFadeOut={1800}
           removePreloader={removePreloader}
         />
       }
@@ -58,7 +58,7 @@ function App() {
         {/* <Social /> */}
         <Home />
         <About />
-        {/* <Skills /> */}
+        <Skills />
       </div>
     </div >
   );

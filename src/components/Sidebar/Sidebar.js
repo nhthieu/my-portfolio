@@ -18,6 +18,7 @@ function Sidebar() {
     return theme === 'dark';
   });
 
+
   const icon = theme === 'light' ? faMoon : faSun;
   const overlayClass = classNames({
     "sidebar__overlay": true,
@@ -25,7 +26,7 @@ function Sidebar() {
   });
 
   const handleChange = () => {
-    setChecked(!checked);
+    // setChecked(!checked);
     toggleTheme();
   }
 
@@ -36,8 +37,8 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebar__content">
-        <div className="sidebar__header" onClick={toggleMenu}>
-          <div className="sidebar__menu-toggle">
+        <div className="sidebar__header">
+          <div className="sidebar__menu-toggle" onClick={toggleMenu}>
             <span>MENU</span>
           </div>
           <div className="theme-switch__wrapper" onClick={handleChange}>

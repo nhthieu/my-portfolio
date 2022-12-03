@@ -40,7 +40,7 @@ function App() {
       {
         showPreloader &&
         <Preloader
-          timeToFadeOut={2000}
+          timeToFadeOut={1500}
           removePreloader={removePreloader}
         />
       }
@@ -55,7 +55,6 @@ function App() {
 
       <Sidebar />
       <div className='main'>
-        {/* <h1> Hello</h1> */}
         {/* <Social /> */}
         <Home />
         <About />

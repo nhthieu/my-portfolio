@@ -1,6 +1,22 @@
 .drawer__item {
   margin-bottom: 5rem;
   color: var(--font-color);
+  transform: scaleY(0);
+}
+
+.drawer__item-open {
+  transform-origin: bottom;
+  animation: drawerItemOpen 0.2s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes drawerItemOpen {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }
 
 .drawer__item:last-child {

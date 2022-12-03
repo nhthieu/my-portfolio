@@ -80,23 +80,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  opacity: 0;
-  animation: homeFadeIn 1s ease-in-out forwards;
-  animation-delay: 2.5s;
   background: rgba(245, 245, 245, 0.21);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-}
-
-@keyframes homeFadeIn {
-  0% {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 
 .home__introduction-greetings {

@@ -63,6 +63,7 @@ code {
   --overlay-color: #121212;
   --font-color: #000;
   --secondary-font-color: #f5f5f5;
+  --third-font-color: #42a4bd;
   --opposite-color: #121212;
   --signature-color: #000;
   --border-color: #d2d2d2;
@@ -90,7 +91,7 @@ code {
   --switch-color: #121212;
   --sr-nav-color: hsl(0 0% 100% / 0.1);
 
-  --bg-url: url(./assets/bg-dark.png);
+  --bg-url: url(./assets/bg-night.png);
 }
 
 li {
@@ -107,6 +108,10 @@ a {
 
 .col-12 {
   width: 100%;
+}
+
+.col-10 {
+  width: 83.3333333333%;
 }
 
 .col-6 {
@@ -164,6 +169,7 @@ a {
 }
 
 .main {
+  overflow: hidden;
   margin-left: var(--sidebar-width);
   width: calc(100% - var(--sidebar-width));
 }

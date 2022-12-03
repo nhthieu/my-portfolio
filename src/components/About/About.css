@@ -1,16 +1,168 @@
 .about {
   /* background-color: var(--opposite-color); */
   background-color: var(--primary-color);
-  height: 100vh;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.about__title {
+  position: absolute;
+  top: 6.5rem;
+  right: 6rem;
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: var(--font-color);
+}
+
+.about__title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -1rem;
+  width: 1px;
+  height: 100%;
+  background-color: var(--font-color);
 }
 
 .about__content {
-  width: 100%;
-  background-color: var(--special-font-color);
+  /* background-color: var(--special-font-color); */
+  display: flex;
+  /* justify-content: space-between;
+  align-items: center; */
+}
+.about__gallery {
+  --row-height: 20rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-auto-rows: var(--row-height); */
+  gap: 1rem;
+  margin-right: 18rem;
 }
 
-.about__footer {
+.about__gallery--img {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.tall-2 {
+  grid-row: span 2;
+}
+
+.about__text {
+  /* flex: 1; */
+  width: 800rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.about__text-introduction {
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  letter-spacing: 0.2rem;
+}
+
+.about__text-introduction h1 {
+  line-height: 100%;
+  font-size: 8rem;
+  font-weight: 700;
+  margin-bottom: 3.2rem;
+  letter-spacing: 0.5rem;
+}
+
+.about__text-introduction-name {
+  color: var(--third-font-color);
+}
+
+/* .about__text-introduction p {
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+} */
+
+.about__text-info {
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 2.4rem;
+  letter-spacing: 0.2rem;
+}
+
+.about__text-info span {
+  color: var(--third-font-color);
+}
+
+.about__text-btn-resume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  border: none;
+  width: 12rem;
+  height: 6rem;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--primary-color);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.about__text-btn-resume:hover {
+  cursor: pointer;
+  background-color: var(--secondary-color-hover);
+}
+
+.about__text-info .about__ .about__footer {
   width: 100%;
   height: 6rem;
-  /* background-color: var(--primary-color); */
+  background-color: var(--red);
+}
+
+/* Small text near the image */
+.img-1,
+.img-3,
+.img-4 {
+  position: relative;
+}
+
+.img-1::before,
+.img-3::before,
+.img-4::before {
+  position: absolute;
+  color: var(--font-color);
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+}
+
+.img-1::before {
+  content: "some old tunes";
+  top: -2.2rem;
+  left: 0;
+}
+
+.img-3::before {
+  content: "guitar & music";
+  bottom: 0;
+  left: -2.2rem;
+  writing-mode: vertical-rl;
+  text-orientation: sideways-right;
+  transform: rotate(-180deg);
+}
+
+.img-4::before {
+  content: "coding moment";
+  bottom: -2.2rem;
+  right: 0;
 }

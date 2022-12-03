@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import DrawerItem from "./DrawerItem";
 import "./Drawer.css";
 
@@ -10,46 +10,54 @@ function Drawer({
     "drawer": true,
     "drawer-open": open,
   })
+  // const drawerContentClass = classNames({
+  //   "drawer__content": true,
+  //   "drawer__content-open": open,
+  // })
 
   return (
-    <motion.div
-      className={drawerClass}
-    >
+    <div className={drawerClass}>
       <div className="drawer__content">
         <ul className="drawer__list">
           <DrawerItem
             title="home"
             to="home"
-            offset={-70}
+            offset={0}
+            open={open}
           />
           <DrawerItem
             title="about"
             to="about"
-            offset={-70}
+            offset={0}
+            open={open}
           />
           <DrawerItem
             title="skills"
             to="skills"
             offset={-70}
+            open={open}
           />
           <DrawerItem
             title="education"
             to="education"
             offset={-70}
+            open={open}
           />
           <DrawerItem
             title="projects"
             to="projects"
             offset={-70}
+            open={open}
           />
           <DrawerItem
             title="contact"
             to="contact"
             offset={-70}
+            open={open}
           />
         </ul>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

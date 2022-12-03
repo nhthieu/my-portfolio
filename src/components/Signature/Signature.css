@@ -18,7 +18,7 @@
   stroke-linecap: var(--signature-linecap);
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: dash 1.5s linear forwards;
+  animation: dash 1.25s linear forwards;
 }
 
 .signature.preloader__signature #signature-underline {
@@ -27,8 +27,8 @@
   stroke-linecap: var(--signature-linecap);
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: dash 1s linear forwards;
-  animation-delay: 1s;
+  animation: dash 0.75s linear forwards;
+  animation-delay: 0.75s;
 }
 
 /* Signature for Home and Header */

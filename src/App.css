@@ -60,6 +60,7 @@ code {
   --secondary-color: #86c5d5;
   --secondary-color-hover: #509bad;
   --third-color: #f5f5f5;
+  --glass-color: rgba(245, 245, 245, 0.21);
   --overlay-color: #121212;
   --font-color: #000;
   --secondary-font-color: #f5f5f5;
@@ -80,9 +81,17 @@ code {
 /* Dark theme */
 [data-theme="dark"] {
   --primary-color: #121212;
+  --secondary-color: #f8ca0e;
+  --secondary-color-hover: #aa8800;
+  --third-color: #121212;
+  --glass-color: rgba(67, 67, 67, 0.4);
+  --overlay-color: #121212;
+  --font-color: #ffffffde;
+  --third-font-color: #f8ca0e;
+
   --opposite-color: #f5f5f5;
   --border-color: rgb(161, 161, 161);
-  --font-color: #ffffffde;
+  /* --font-color: #ffffffde; */
   --opposite-font-color: #000;
   --special-font-color: #f8ca0e;
   --home-name-color: rgb(243, 122, 29);

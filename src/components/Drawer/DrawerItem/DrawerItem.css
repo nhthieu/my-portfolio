@@ -1,6 +1,6 @@
 .drawer__item {
   margin-bottom: 5rem;
-  color: var(--font-color);
+  color: var(--third-color);
   transform: scaleY(0);
 }
 
@@ -31,7 +31,7 @@
 /* .drawer__link.active, */
 .drawer__link:hover {
   cursor: pointer;
-  color: var(--third-color);
+  /* color: var(--font-color); */
 }
 /* 
 .drawer__link.active::after, */

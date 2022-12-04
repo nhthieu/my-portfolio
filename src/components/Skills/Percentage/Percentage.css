@@ -1,0 +1,24 @@
+.percentage {
+  width: 150%;
+}
+
+.percentage__background {
+  height: 0.6rem;
+  background-color: var(--primary-color);
+  border-radius: 0.5rem;
+}
+
+.percentage__foreground {
+  height: 0.6rem;
+  background-color: var(--font-color);
+  border-radius: 1rem;
+}
+
+.percentage__value {
+  display: block;
+  margin-top: 1rem;
+  height: 0.6rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--primary-color);
+}

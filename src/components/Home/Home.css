@@ -80,9 +80,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: rgba(245, 245, 245, 0.21);
+  background: var(--glass-color);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
+  border-radius: 16px;
 }
 
 .home__introduction-greetings {
@@ -91,7 +92,7 @@
   user-select: none;
   letter-spacing: 0.6rem;
   /* font-weight: 400; */
-  color: var(--primary-color);
+  color: #ffffffde;
 }
 
 .home__introduction-name {
@@ -110,7 +111,7 @@
   position: relative;
   font-size: 2.8rem;
   font-weight: 400;
-  color: var(--primary-color);
+  color: #ffffffde;
   opacity: 0.7;
   word-spacing: 0.5rem;
 }
@@ -120,34 +121,12 @@
   display: inline-block;
   width: 8rem;
   height: 2px;
-  background-color: var(--primary-color);
+  background-color: #ffffffde;
   margin-right: 2rem;
   transform: translateY(-0.25em);
 }
 
-.home__introduction-description p {
-  font-size: 2.2rem;
-  font-weight: 400;
-  color: var(--font-color);
-  text-align: left;
-  line-height: 1.6;
-}
-
-.home__avatar {
-  background: url(../../assets/profile.jpg) no-repeat center;
-  background-size: cover;
-  /* filter: grayscale(100%); */
-  /* width: 32%; */
-  flex: 0.6;
-  aspect-ratio: 1/1;
-  opacity: 0;
-  box-shadow: inset 0 0 0 9px rgb(255 255 255 /30%);
-  animation: blob 8s ease-in-out infinite 0.75s,
-    homeAvatarFadeIn 1s ease-in-out forwards;
-  animation-delay: 2.5s;
-}
-
-@keyframes homeAvatarFadeIn {
+/* @keyframes homeAvatarFadeIn {
   0% {
     opacity: 0;
     transform: translateX(50px);
@@ -196,7 +175,7 @@
   100% {
     height: 0;
   }
-}
+} */
 
 @media screen and (max-width: 480px) {
   .home {

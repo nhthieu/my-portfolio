@@ -22,7 +22,7 @@
 }
 
 .Typewriter__cursor {
-  color: var(--primary-color);
+  color: #ffffffde;
 }
 
 @media screen and (max-width: 480px) {

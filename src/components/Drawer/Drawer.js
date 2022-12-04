@@ -4,7 +4,8 @@ import DrawerItem from "./DrawerItem";
 import "./Drawer.css";
 
 function Drawer({
-  open = false
+  open = false,
+  toggleMenu
 }) {
   const drawerClass = classNames({
     "drawer": true,
@@ -24,36 +25,42 @@ function Drawer({
             to="home"
             offset={0}
             open={open}
+            toggleMenu={toggleMenu}
           />
           <DrawerItem
             title="about"
             to="about"
             offset={0}
             open={open}
+            toggleMenu={toggleMenu}
           />
           <DrawerItem
             title="skills"
             to="skills"
             offset={0}
             open={open}
+            toggleMenu={toggleMenu}
           />
           <DrawerItem
             title="education"
             to="education"
             offset={-70}
             open={open}
+            toggleMenu={toggleMenu}
           />
           <DrawerItem
             title="projects"
             to="projects"
             offset={-70}
             open={open}
+            toggleMenu={toggleMenu}
           />
           <DrawerItem
             title="contact"
             to="contact"
             offset={-70}
             open={open}
+            toggleMenu={toggleMenu}
           />
         </ul>
       </div>

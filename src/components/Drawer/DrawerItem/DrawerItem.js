@@ -6,7 +6,8 @@ function DrawerItem({
   title,
   to,
   offset,
-  open = false
+  open = false,
+  toggleMenu
 }) {
   const drawerItemClass = classNames({
     "drawer__item": true,
@@ -23,6 +24,7 @@ function DrawerItem({
         smooth={true}
         offset={offset}
         duration={500}
+        onClick={toggleMenu}
       >
         {title}
       </Link>

@@ -67,6 +67,7 @@ function Sidebar() {
       </div>
       <Drawer
         open={open}
+        toggleMenu={toggleMenu}
       />
       <div className={overlayClass} onClick={toggleMenu}></div>
     </div>

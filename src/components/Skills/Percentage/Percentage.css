@@ -4,21 +4,54 @@
 
 .percentage__background {
   height: 0.6rem;
-  background-color: var(--primary-color);
+  background-color: var(--opposite-color);
   border-radius: 0.5rem;
 }
 
 .percentage__foreground {
+  position: relative;
   height: 0.6rem;
-  background-color: var(--font-color);
-  border-radius: 1rem;
+  background-color: var(--primary-color);
+  border-radius: 0.5rem;
+}
+
+.percentage__value-tag {
+  position: absolute;
+  top: -3.8rem;
+  right: 0;
+  width: 5rem;
+  height: 2.8rem;
+  background-color: var(--primary-color);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #ffffffde;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border-bottom-right-radius: 0;
+}
+
+.percentage__value-tag::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 0.5rem solid transparent;
+  border-top-color: var(--primary-color);
+  border-bottom-width: 0;
+  border-right-width: 0;
 }
 
 .percentage__value {
-  display: block;
-  margin-top: 1rem;
-  height: 0.6rem;
-  font-size: 1.4rem;
+  /* display: block; */
+  /* position: absolute;
+  top: -2.4rem;
+  right: 0;
+  height: 0.6rem; */
+  font-size: 1.6rem;
   font-weight: 400;
-  color: var(--primary-color);
+  color: var(--font-color);
 }

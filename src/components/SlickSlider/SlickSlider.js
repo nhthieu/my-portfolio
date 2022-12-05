@@ -1,38 +1,28 @@
+import { forwardRef } from "react";
 import Slider from "react-slick"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./SlickSlider.css"
 
-
-function SlickSlider() {
+const SlickSlider = forwardRef((props, ref) => {
   const settings = {
-    dots: true,
+    dots: false,
+    arrows: false,
     infinite: true,
-    speed: 500,
+    centerMode: true,
+    speed: 300,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    cssEase: 'ease-out',
+    variableWidth: true,
+    variableHeight: true
   };
 
   return (
-    <Slider {...settings}>
-      <div>
-        <h3>1</h3>
-      </div>
-      <div>
-        <h3>2</h3>
-      </div>
-      <div>
-        <h3>3</h3>
-      </div>
-      <div>
-        <h3>4</h3>
-      </div>
-      <div>
-        <h3>5</h3>
-      </div>
-      <div>
-        <h3>6</h3>
-      </div>
+    <Slider ref={ref} {...settings}>
+      {props.children}
     </Slider>
   );
-}
+});
 
 export default SlickSlider;

@@ -1,0 +1,11 @@
+.slick-slider {
+  z-index: 5;
+}
+
+.slick-track {
+  will-change: transform;
+}
+
+.slick-list {
+  overflow: hidden;
+}

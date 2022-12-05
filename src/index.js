@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from './ThemeContext';
 import { ScrollYProvider } from './ScrollYContext';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

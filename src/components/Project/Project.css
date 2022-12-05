@@ -1,0 +1,99 @@
+.project {
+  width: 100%;
+  height: 100vh;
+  /* background-color: red; */
+  user-select: none;
+}
+
+.project__content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: 10.5rem;
+}
+
+.project__content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background-color: var(--primary-color);
+}
+
+.project__content::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 40rem;
+  background-color: var(--primary-color);
+}
+
+.project__title-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 15rem 12rem;
+}
+
+.project__main-title {
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: #ffffffde;
+  letter-spacing: 0.5rem;
+}
+
+.slick__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+}
+
+.slick__nav-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--font-color);
+}
+
+.slick__nav-box:hover {
+  cursor: pointer;
+}
+
+.slick__nav-prev:hover svg {
+  transform: translateX(-1rem);
+  stroke: var(--secondary-color-hover);
+}
+
+.slick__nav-next:hover svg {
+  transform: translateX(1rem);
+  stroke: var(--secondary-color-hover);
+}
+
+.slick__arrow svg {
+  transition: all 0.3s;
+  stroke: var(--font-color);
+  stroke-width: 2;
+}
+
+.slick__arrow-prev {
+  margin-right: 2.2rem;
+}
+
+.slick__arrow-next {
+  margin-left: 2.2rem;
+}
+
+.slick__nav-line {
+  width: 1px;
+  height: 5rem;
+  background-color: var(--font-color);
+  margin: 0 2.2rem;
+}

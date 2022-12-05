@@ -11,11 +11,9 @@ import Social from './components/Social';
 import Home from './components/Home';
 import About from './components/About';
 import Skills from './components/Skills';
+import Project from './components/Project';
 
 import './App.css';
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-
 
 function App() {
   const [showPreloader, setShowPreloader] = useState(true);
@@ -59,6 +57,7 @@ function App() {
         <Home />
         <About />
         <Skills />
+        <Project />
       </div>
     </div >
   );

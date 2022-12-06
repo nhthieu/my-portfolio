@@ -7,8 +7,12 @@ function ProjectItem({ project }) {
         <div className="project-item__overlay"></div>
         <div className="project-item__description">
           <div className="project-item__details">
-            <h1>{project?.name}</h1>
-            <p>{project?.description}</p>
+            <div className="project-item__details-title">
+              <h1>{project?.name}</h1>
+            </div>
+            <div className="project-item__details-description">
+              <p>{project?.description}</p>
+            </div>
           </div>
           <a
             className="project-item__details-btn"

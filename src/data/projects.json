@@ -2,29 +2,36 @@
   {
     "id": 1,
     "name": "Covid Management Website",
-    "description": "This is a website for managing covid patients",
-    "link": "https://www.google.com/",
+    "description": "A Web project for the Web Development Course aims to manage COVID patients and related products",
+    "link": "https://github.com/namhoai1109/Covid-web",
     "img": "/img/1.jpg"
   },
   {
     "id": 2,
     "name": "Hanbai",
-    "description": "This is a website for managing covid patients",
-    "link": "https://www.google.com/",
+    "description": "Hanbai is an Android application that helps online merchants manage orders, customers list and products list.",
+    "link": "https://github.com/Anhduy-git/Hanbai",
     "img": "/img/2.jpg"
   },
   {
     "id": 3,
-    "name": "Restaurant Management",
-    "description": "This is a website for managing covid patients",
-    "link": "https://www.google.com/",
+    "name": "Food Order Management App",
+    "description": "An Android management app for a shop, keeps track of revenue, customers as well as list of food",
+    "link": "https://github.com/Anhduy-git/Food-Order-Management",
     "img": "/img/3.jpg"
   },
   {
     "id": 4,
-    "name": "Portfolio",
-    "description": "This is a website for managing covid patients",
-    "link": "https://www.google.com/",
+    "name": "Basic Chat App",
+    "description": "A real-time Chat App using React as the front-end implementing socket.io with Node.js as the back-end",
+    "link": "https://github.com/nhthieu/chat_app",
     "img": "/img/4.jpg"
+  },
+  {
+    "id:": 5,
+    "name": "Restaurant Management App",
+    "description": "A simple Python application implementing socket programming and SQLite database for managing restaurant orders between clients and server",
+    "link": "https://github.com/nhthieu/MMT-Project",
+    "img": "/img/1.jpg"
   }
 ]

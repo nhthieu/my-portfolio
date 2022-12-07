@@ -6,13 +6,15 @@
 }
 
 .skills__title {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding-top: 6rem;
-  font-size: 2.6rem;
-  font-weight: 300;
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: 0.5rem;
   color: #ffffffde;
 }
 

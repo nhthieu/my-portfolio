@@ -1,6 +1,6 @@
 .project-item__content {
   position: relative;
-  cursor: pointer;
+  /* cursor: pointer; */
   width: 80rem;
   height: 46rem;
   margin: 0 5rem;

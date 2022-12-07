@@ -64,6 +64,7 @@ code {
   --glass-color: rgba(245, 245, 245, 0.21);
   --overlay-color: #121212;
   --font-color: #000;
+  --placeholder-color: rgb(141, 141, 141);
   --secondary-font-color: #f5f5f5;
   --third-font-color: #42a4bd;
   --signature-color: #000;
@@ -87,6 +88,7 @@ code {
   --glass-color: rgba(67, 67, 67, 0.4);
   --overlay-color: #121212;
   --font-color: #ffffffde;
+  --placeholder-color: rgb(119, 119, 119);
   --third-font-color: #f8ca0e;
 
   --opposite-color: #f5f5f5;

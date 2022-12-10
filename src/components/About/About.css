@@ -112,11 +112,15 @@
   background-color: var(--secondary-color);
   border: none;
   width: 12rem;
-  height: 6rem;
   font-size: 2rem;
   font-weight: 400;
   color: var(--primary-color);
   transition: background-color 0.3s ease-in-out;
+  padding: 2rem 6rem;
+}
+
+.about__text-btn-resume span {
+  margin-right: 1rem;
 }
 
 .about__text-btn-resume:hover {

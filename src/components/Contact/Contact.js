@@ -1,9 +1,10 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useRef } from "react";
 import { Element } from "react-scroll";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faEnvelope, faPaperPlane, faMessage } from "@fortawesome/free-solid-svg-icons";
+import emailjs from '@emailjs/browser';
 
 import { ThemeContext } from "~/ThemeContext";
 import StorySet from "./StorySet";
@@ -11,6 +12,7 @@ import FormInput from "./FormInput";
 import "./Contact.css";
 
 function Contact() {
+  const form = useRef();
   const theme = useContext(ThemeContext).theme;
   const [formData, setFormData] = useState({
     name: "",
@@ -22,26 +24,36 @@ function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }
 
-  const validateForm = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     const { name, email, message } = formData;
     if (name === "" || email === "" || message === "") {
-      return false;
+      toast.error("Please fill in all fields");
+      return;
     }
     // Email validation
     const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (!emailRegex.test(email)) {
-      return false;
-    }
-    return true;
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!validateForm()) {
-      toast.error("Please fill in all fields");
+      toast.error("Email not valid!")
       return;
     }
-    toast.info("Message sent!")
+
+    // Send email
+    emailjs.sendForm(
+      'service_ra2r1id',
+      'template_0v0xlpb',
+      form.current,
+      'Wssn4b1tkoJes4eV2')
+      .then((result) => {
+        toast.info("Message sent!")
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        })
+      }, (error) => {
+        toast.error("Something went wrong!")
+      });
   }
 
   return (
@@ -58,6 +70,7 @@ function Contact() {
 
             {/* Form section */}
             <form
+              ref={form}
               autoComplete="off"
               className="contact__input-area"
               onSubmit={handleSubmit}

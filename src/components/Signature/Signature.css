@@ -40,20 +40,27 @@
   width: 11rem;
 }
 
-.signature.header__signature #signature-title,
-.signature.home__signature #signature-title {
-  stroke: var(--font-color);
-  stroke-width: var(--header-signature-width);
-  stroke-linecap: var(--signature-linecap);
-  /* transition: all var(--transition-time); */
+.signature.footer__signature {
+  width: 9rem;
 }
 
+.signature.header__signature #signature-title,
+.signature.home__signature #signature-title,
 .signature.header__signature #signature-underline,
 .signature.home__signature #signature-underline {
   stroke: var(--font-color);
-  stroke-width: var(--header-signature-width);
   stroke-linecap: var(--signature-linecap);
-  /* transition: all var(--transition-time); */
+}
+
+.signature.home__signature #signature-title,
+.signature.home__signature #signature-underline {
+  stroke-width: var(--home-signature-width);
+}
+
+.signature.signature.footer__signature #signature-title,
+.signature.footer__signature #signature-underline {
+  stroke-width: var(--footer-signature-width);
+  stroke: #121212;
 }
 
 /* Animation handwritten signature*/

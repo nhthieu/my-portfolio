@@ -5,13 +5,14 @@ function Signature({
   preloaderSignature = false,
   headerSignature = false,
   homeSignature = false,
+  footerSignature = false,
   fadeOut = false }
 ) {
   const signatureClass = classNames({
     "signature": true,
-    "header__signature": headerSignature,
     "preloader__signature": preloaderSignature,
     "home__signature": homeSignature,
+    "footer__signature": footerSignature,
     "fade-out": fadeOut
   })
 

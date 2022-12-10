@@ -1,6 +1,8 @@
 import { Element } from "react-scroll";
 import { useInView } from "react-intersection-observer";
 import { motion } from 'framer-motion';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import "./About.css";
 
 function About() {
@@ -164,7 +166,8 @@ function About() {
                 variants={getParagraphVariants(0.7)}
               >
                 <div className="about__text-btn-resume">
-                  resume
+                  <span>resume</span>
+                  <FontAwesomeIcon icon={faDownload} className="about__text-btn-resume-icon" />
                 </div>
               </motion.a>
             </div>

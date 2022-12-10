@@ -35,7 +35,8 @@ code {
   /* Signatures related */
   --signature-linecap: round;
   --preloader-signature-width: 3;
-  --header-signature-width: 6;
+  --home-signature-width: 3;
+  --footer-signature-width: 3;
 
   /* Colors for white theme*/
   /* --primary-color: #f5f5f5;
@@ -61,6 +62,7 @@ code {
   --secondary-color-hover: #509bad;
   --third-color: #f5f5f5;
   --opposite-color: #121212;
+  --footer-color: #f5f5f5;
   --glass-color: rgba(245, 245, 245, 0.21);
   --overlay-color: #121212;
   --font-color: #000;
@@ -85,6 +87,7 @@ code {
   --secondary-color: #f8ca0e;
   --secondary-color-hover: #aa8800;
   --third-color: #121212;
+  --footer-color: #f8ca0e;
   --glass-color: rgba(67, 67, 67, 0.4);
   --overlay-color: #121212;
   --font-color: #ffffffde;

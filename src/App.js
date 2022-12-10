@@ -7,12 +7,13 @@ import { ThemeContext } from './ThemeContext';
 import Preloader from './components/Preloader';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
-import Social from './components/Social';
+// import Social from './components/Social';
 import Home from './components/Home';
 import About from './components/About';
 import Skills from './components/Skills';
 import Project from './components/Project';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 import './App.css';
 
@@ -60,6 +61,7 @@ function App() {
         <Skills />
         <Project />
         <Contact />
+        <Footer />
       </div>
     </div >
   );

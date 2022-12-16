@@ -39,6 +39,7 @@ function Contact() {
     }
 
     // Send email
+    toast.info("Sending message...");
     emailjs.sendForm(
       'service_ra2r1id',
       'template_0v0xlpb',
@@ -110,14 +111,14 @@ function Contact() {
         </div>
         <ToastContainer
           position="top-right"
-          autoClose={5000}
-          hideProgressBar={false}
+          autoClose={2000}
+          hideProgressBar={true}
           newestOnTop={false}
           closeOnClick
           rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
+          // pauseOnFocusLoss
+          // draggable
+          // pauseOnHover
           theme={theme}
         />
       </section>

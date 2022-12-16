@@ -26,7 +26,7 @@ function Footer() {
         </div>
         <div className="footer__content-right">
           <div className="footer__copyright">
-            <span>© HIEUNGUYEN All rights reserved.</span>
+            <span>© HIEUNGUYEN all rights reserved.</span>
           </div>
         </div>
       </div>

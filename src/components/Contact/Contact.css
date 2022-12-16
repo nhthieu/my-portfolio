@@ -27,7 +27,7 @@
 }
 
 .contact__input-submit {
-  width: 12rem;
+  width: var(--btn-width);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,6 +47,9 @@
 
 .contact__input-submit-title {
   margin-right: 1rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
 }
 
 .Toastify__toast-body {

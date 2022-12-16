@@ -24,12 +24,12 @@
 
 .footer__trademark {
   width: 35rem;
-  height: 10rem;
+  height: 9rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--footer-color);
-  padding: 2rem 4rem;
+  padding: 0 4rem;
   margin-right: 8rem;
 }
 
@@ -44,11 +44,11 @@
 
 .footer__artwork-source {
   width: 35rem;
-  height: 10rem;
+  height: 9rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2rem 4rem;
+  padding: 0 4rem;
   background-color: var(--footer-color);
   text-align: center;
   font-size: 1.4rem;
